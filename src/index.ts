@@ -24,9 +24,9 @@ const stack = () => {
     }
 }
 
-const dibug =  async (data: string|number|object|null) => {
+const dibug =  async (data: string|number|object|null, host: string = '127.0.0.1') => {
     try {
-        await fetch('http://localhost:33285', {
+        await fetch(`http://${host}:33285`, {
             method: 'POST',
             body: JSON.stringify({
                 type: 'info',
