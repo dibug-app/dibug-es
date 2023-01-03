@@ -1,0 +1,23 @@
+{
+  "name": "dibug",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dibug-app/dibug-js.git"
+  },
+  "author": "Jonatan Orozco <jonatan.orozco@kiube.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dibug-app/dibug-js/issues"
+  },
+  "homepage": "https://github.com/dibug-app/dibug-js#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.0"
+  }
+}
