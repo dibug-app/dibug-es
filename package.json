@@ -1,5 +1,5 @@
 {
-  "name": "dibug",
+  "name": "@dibug/core",
   "version": "0.0.1",
   "description": "",
   "main": "src/index.js",
