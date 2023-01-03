@@ -1,8 +1,8 @@
 import fetch from 'node-fetch'
-import {basename} from 'path'
+import { basename } from 'path'
 
 const stack = () => {
-    const stackTrace = (new Error()).stack
+    const stackTrace = (new Error()).stack!
     const stackLines = stackTrace.split('\n')
     const rawFileLine = stackLines[3]
     const filePosition = rawFileLine.indexOf('file://')
@@ -17,7 +17,7 @@ const stack = () => {
     }
 }
 
-const dibug =  async (data) => {
+const dibug =  async (data: string|number|object|null) => {
     fetch('http://localhost:33285', {
         method: 'POST',
         body: JSON.stringify({

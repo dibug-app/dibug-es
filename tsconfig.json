@@ -1,0 +1,16 @@
+{
+  "include": [
+    "src/**/*"
+  ],
+  "compilerOptions": {
+    "allowJs": false,
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "outDir": "dist",
+    "declarationMap": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "module": "es2022",
+    "target": "es2022"
+  }
+}
