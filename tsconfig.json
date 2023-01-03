@@ -6,14 +6,15 @@
     "allowJs": false,
     "declaration": true,
     "emitDeclarationOnly": false,
+    "esModuleInterop": true,
     "outDir": "dist",
     "declarationMap": true,
     "strict": true,
     "moduleResolution": "node",
     "module": "commonjs",
-    "target": "ES2021",
+    "target": "ES2018",
     "lib": [
-      "ES2021",
+      "ES2018",
       "DOM"
     ],
     "typeRoots": [
