@@ -4,7 +4,14 @@ import { basename } from 'path'
 const stack = () => {
     const stackTrace = (new Error()).stack!
     const stackLines = stackTrace.split('\n')
-    const rawFileLine = stackLines[3]
+    const rawFileLine = stackLines.find((item) => item.includes('file://'))
+
+    if (!rawFileLine)  {
+        return {
+            file: null
+        }
+    }   
+
     const filePosition = rawFileLine.indexOf('file://')
     const fileLine = rawFileLine.substring(filePosition).replace('file://', '')
     const fileTokens = fileLine.split(':')
@@ -18,14 +25,16 @@ const stack = () => {
 }
 
 const dibug =  async (data: string|number|object|null) => {
-    fetch('http://localhost:33285', {
-        method: 'POST',
-        body: JSON.stringify({
-            type: 'info',
-            data,
-            ...stack()
+    try {
+        await fetch('http://localhost:33285', {
+            method: 'POST',
+            body: JSON.stringify({
+                type: 'info',
+                data,
+                ...stack()
+            })
         })
-    })
+    } catch (exception) {}
 }
 
 export default dibug
