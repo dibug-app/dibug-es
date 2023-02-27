@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/dibug-app/dibug-js#readme",
   "dependencies": {
-    "esbuild": "0.16.13",
+    "esbuild": "0.17.10",
     "node-fetch": "^3.3.0"
   },
   "devDependencies": {
